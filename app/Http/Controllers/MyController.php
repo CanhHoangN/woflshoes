@@ -79,19 +79,16 @@ class MyController extends Controller
                 'password'=>'required|min:6|max:20',
                 'fullname'=>'required',
                 'repassword'=>'required|same:password',
-                'contact'=>'required',
-                'address'=>'required'
             ],
             [
-                'email.required'=>'Nhap email.',
-                'email.email'=>'Dinh dang email khong dung.',
-                'email.unique'=>'Email da co nguoi su dung.',
-                'password.required'=>'Nhap password.',
-                'password.min'=>'Mat khau min la 6.',
-                'password.max'=>'Mat khau max la 20.',
-                'repassword.same'=>'Mat khau khong giong nhau.',
-                'contact.required'=>'Nhap so dien thoai.',
-                'address.required'=>'Nhap dia chi.'
+                'email.required'=>'Vui lòng nhập email.',
+                'email.email'=>'Định dạng email không đúng.',
+                'email.unique'=>'Email đã có người sử dụng.',
+                'password.required'=>'Vui lòng nhập password.',
+                'password.min'=>'Mật khẩu ít nhất là 6 kí tự.',
+                'password.max'=>'Mật khẩu dài nhất là 20 kí tự.',
+                'repassword.same'=>'Mật khẩu không giống nhau.',
+
             ]);
         $user=new User();
         $user->name=$req->fullname;
@@ -131,13 +128,13 @@ class MyController extends Controller
             }
             else
             {
-                return redirect()->route('index')->with(['flag'=>'success', 'message'=>'Dang nhap thanh cong ']);
+                return redirect()->route('index')->with(['flag'=>'success', 'message'=>'Đăng nhập thành công']);
             }
 
         }
         else
         {
-            return redirect()->back()->with(['flag'=>'danger', 'message'=>'Dang nhap khong thanh cong.']);
+            return redirect()->back()->with(['flag'=>'danger', 'message'=>'Tài khoản hoặc mật khẩu không chính xác.']);
         }
     }
     public function addcart(Request $req, $id)

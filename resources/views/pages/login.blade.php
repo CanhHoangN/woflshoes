@@ -27,16 +27,19 @@
                     <img class="img-responsive" src="{{asset('images/frontend_image/login/signin-image.jpg')}}" alt="">
                 </div>
                 <div class="col-sm-6">
-                    <form action="" method="post">
+                    <form method="post" action="{!! url('login') !!}">
                         @csrf
                         <h2 id="signup">Sign Up</h2>
+                        @if(Session::has('flag'))
+                            <div class="alert-{{Session::get('flag')}}">{{Session::get('message')}}</div>
+                        @endif
                         <div class="email">
                             <label for="email"><i class="fa fa-envelope"></i></label>
-                            <input type="email" placeholder="Your Email" name="email" id="email">
+                            <input type="email" placeholder="Your Email" name="email" id="email" required>
                         </div>
                         <div class="password">
                             <label for="password"><i class="fa fa-lock"></i></label>
-                            <input type="password" placeholder="Password" name="password" id="password">
+                            <input type="password" placeholder="Password" name="password" id="password" required>
                         </div>
                         <div class="remember">
                             <input type="checkbox" name="remember" id="remember"><label for="remember"><span>Remember me</span></label>

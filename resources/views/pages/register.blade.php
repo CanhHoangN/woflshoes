@@ -19,8 +19,20 @@
                <div class="row register">
                    <div class="col-sm-6 register-form">
                        <h2 id="signup-register">Sign Up</h2>
-                       <form action="">
+                       <form action="{!! url('register') !!}" method="post" enctype="multipart/form-data">
                            @csrf
+                           @if(count($errors)>0)
+                               <div class='alert-danger'>
+                                   @foreach($errors->all() as $err)
+                                       {{$err}}<br>
+                                   @endforeach
+                               </div>
+                           @endif
+                           @if(Session::has('success'))
+                               <div class='alert-success'>
+                                   {{Session::get('success')}}
+                               </div>
+                           @endif
                            <div class="username">
                                <label for="username"><i class="fa fa-envelope"></i></label>
                                <input type="text" placeholder="Your Name" name="fullname" id="fullname">

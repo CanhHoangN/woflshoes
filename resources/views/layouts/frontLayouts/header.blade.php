@@ -30,11 +30,11 @@
                     <li>
                         <a href={{route('logout')}}>Logout</a>
                     </li>
-                   @else
+                </li>
+                @else
                     <li>
                         <a href={{route('register')}}>Register</a>
                     </li>
-                </li>
                 @endif
 
             </ul><!-- menu Finish -->
