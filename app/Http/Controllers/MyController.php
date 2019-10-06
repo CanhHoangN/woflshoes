@@ -25,7 +25,7 @@ class MyController extends Controller
     }
     public function shop()
     {
-        $products= Products::where('approved', '1')->paginate(9);
+        $products = Products::where('approved', '1')->paginate(9);
         return view('pages.shop', compact('products'));
     }
     public function pSearch(Request $request)
@@ -36,12 +36,11 @@ class MyController extends Controller
             $products = Products::where('productName', 'LIKE', '%' . $name . '%')->paginate(9);
             return view('pages.shop', compact('products'));
         }
-
     }
     public function getDetail($id)
     {
-        $productDetail=Products::where('productCode', $id)->first();
-        $productLine= DB::table('products as p')
+        $productDetail = Products::where('productCode', $id)->first();
+        $productLine = DB::table('products as p')
             ->join('productlines as pl', 'p.productLineID', '=', 'pl.productLineID')
             ->select('p.*', 'pl.*')
             ->where('p.productCode', '=', $id)
@@ -54,8 +53,8 @@ class MyController extends Controller
     }
     public function contact(Request $request)
     {
-        $data= ['name'=> $request->name, 'email'=>$request->email, 'subject'=>$request->subject];
-        Mail::send('email.formMail', $data, function($sms){
+        $data = ['name' => $request->name, 'email' => $request->email, 'subject' => $request->subject];
+        Mail::send('email.formMail', $data, function ($sms) {
             $sms->from('nguyenkhacngoc089@gmail.com', 'WolfShop');
             $sms->to('nguyenkhacngoc089@gmail.com', 'Ngoc Nguyen')->subject('Phản hồi từ WolfShop');
         });
@@ -73,29 +72,31 @@ class MyController extends Controller
     }
     public function postregister(Request $req)
     {
-        $this->validate($req,
+        $this->validate(
+            $req,
             [
-                'email'=>'required|email|unique:users,email',
-                'password'=>'required|min:6|max:20',
-                'fullname'=>'required',
-                'repassword'=>'required|same:password',
+                'email' => 'required|email|unique:users,email',
+                'password' => 'required|min:6|max:20',
+                'fullname' => 'required',
+                'repassword' => 'required|same:password',
             ],
             [
-                'email.required'=>'Vui lòng nhập email.',
-                'email.email'=>'Định dạng email không đúng.',
-                'email.unique'=>'Email đã có người sử dụng.',
-                'password.required'=>'Vui lòng nhập password.',
-                'password.min'=>'Mật khẩu ít nhất là 6 kí tự.',
-                'password.max'=>'Mật khẩu dài nhất là 20 kí tự.',
-                'repassword.same'=>'Mật khẩu không giống nhau.',
+                'email.required' => 'Vui lòng nhập email.',
+                'email.email' => 'Định dạng email không đúng.',
+                'email.unique' => 'Email đã có người sử dụng.',
+                'password.required' => 'Vui lòng nhập password.',
+                'password.min' => 'Mật khẩu ít nhất là 6 kí tự.',
+                'password.max' => 'Mật khẩu dài nhất là 20 kí tự.',
+                'repassword.same' => 'Mật khẩu không giống nhau.',
 
-            ]);
-        $user=new User();
-        $user->name=$req->fullname;
-        $user->email=$req->email;
-        $user->password=Hash::make($req->password);
-        $user->phone=$req->contact;
-        $user->address=$req->address;
+            ]
+        );
+        $user = new User();
+        $user->name = $req->fullname;
+        $user->email = $req->email;
+        $user->password = Hash::make($req->password);
+        $user->phone = $req->contact;
+        $user->address = $req->address;
         $user->save();
         return redirect()->back()->with('success', 'Account successfully created.');
     }
@@ -105,45 +106,40 @@ class MyController extends Controller
     }
     public function postlogin(Request $req)
     {
-        $this->validate($req,
+        $this->validate(
+            $req,
             [
-                'email'=>'required|email',
-                'password'=>'required|min:6|max:20'
+                'email' => 'required|email',
+                'password' => 'required|min:6|max:20'
             ],
             [
-                'email.required'=>'Nhap email.',
-                'email.email'=>'Dinh dang email khong dung.',
-                'password.required'=>'Nhap password.',
-                'password.max'=>'Mat khau max la 20.',
-                'password.min'=>'Mat khau min la 6.'
-            ]);
-        $levelUser=User::where('email', $req->email)->first();
-        $credentials=array('email' => $req->email, 'password' => $req->password);
-        if(Auth::attempt($credentials))
-        {
-            if($levelUser->admin==1)
-            {
+                'email.required' => 'Nhap email.',
+                'email.email' => 'Dinh dang email khong dung.',
+                'password.required' => 'Nhap password.',
+                'password.max' => 'Mat khau max la 20.',
+                'password.min' => 'Mat khau min la 6.'
+            ]
+        );
+        $levelUser = User::where('email', $req->email)->first();
+        $credentials = array('email' => $req->email, 'password' => $req->password);
+        if (Auth::attempt($credentials)) {
+            if ($levelUser->admin == 1) {
                 Auth::logout();
-                return redirect()->back()->with(['flag'=>'success', 'message'=>'Vào trang đăng nhập của admin vì tài khoản này của admin.']);
+                return redirect()->back()->with(['flag' => 'success', 'message' => 'Vào trang đăng nhập của admin vì tài khoản này của admin.']);
+            } else {
+                return redirect()->route('index')->with(['flag' => 'success', 'message' => 'Đăng nhập thành công']);
             }
-            else
-            {
-                return redirect()->route('index')->with(['flag'=>'success', 'message'=>'Đăng nhập thành công']);
-            }
-
-        }
-        else
-        {
-            return redirect()->back()->with(['flag'=>'danger', 'message'=>'Tài khoản hoặc mật khẩu không chính xác.']);
+        } else {
+            return redirect()->back()->with(['flag' => 'danger', 'message' => 'Tài khoản hoặc mật khẩu không chính xác.']);
         }
     }
     public function addcart(Request $req, $id)
     {
-        $product= Products::find($id);
-        $oldcart=Session('Cart')?Session::get('Cart'):null;
-        $cart=new Cart($oldcart);
+        $product = Products::find($id);
+        $oldcart = Session('Cart') ? Session::get('Cart') : null;
+        $cart = new Cart($oldcart);
         $cart->add($product, $id);
-        $req->Session()->put('Cart',$cart);
+        $req->Session()->put('Cart', $cart);
         return redirect()->back();
     }
     public function cart()
@@ -152,9 +148,9 @@ class MyController extends Controller
     }
     public function categories($id)
     {
-        $pc=Products::where('productLineID',$id)->get();
-        $count=Products::where('productLineID',$id)->count();
-        return view('pages.categories', compact('pc','count'));
+        $pc = Products::where('productLineID', $id)->get();
+        $count = Products::where('productLineID', $id)->count();
+        return view('pages.categories', compact('pc', 'count'));
     }
     public function logout()
     {
@@ -164,22 +160,20 @@ class MyController extends Controller
     }
     public function checkout(Request $req)
     {
-        $cart=Session::get('Cart');
-        $order=new Orders();
-        if(Auth::check()){
-            $order->customerID=Auth::user()->id;
-        }
-        else
-        {
+        $cart = Session::get('Cart');
+        $order = new Orders();
+        if (Auth::check()) {
+            $order->customerID = Auth::user()->id;
+        } else {
             return redirect('/login');
         }
-        $order->orderDate=date('Y-m-d');
+        $order->orderDate = date('Y-m-d');
         $order->save();
-        foreach($cart->items as $key=>$value){
-            $orderdetail=new Orderdetails();
-            $orderdetail->orderID=$order->orderID;
-            $orderdetail->productID=$key;
-            $orderdetail->quantityOrderred=$value['quantity'];
+        foreach ($cart->items as $key => $value) {
+            $orderdetail = new Orderdetails();
+            $orderdetail->orderID = $order->orderID;
+            $orderdetail->productID = $key;
+            $orderdetail->quantityOrderred = $value['quantity'];
             $orderdetail->save();
         }
         Session::forget('Cart');
@@ -189,11 +183,36 @@ class MyController extends Controller
     {
         $data = $req->all();
         $total = $data['product_qty'];
-        $product= Products::find($id);
-        $oldcart=Session('Cart')?Session::get('Cart'):null;
-        $cart=new Cart($oldcart);
+        $product = Products::find($id);
+        $oldcart = Session('Cart') ? Session::get('Cart') : null;
+        $cart = new Cart($oldcart);
         $cart->add2($product, $id, $total);
-        $req->Session()->put('Cart',$cart);
+        $req->Session()->put('Cart', $cart);
         return redirect()->back();
+    }
+    // Updated 6/10/2019 by Ngoc.
+    public function price($a)
+    {
+        if($a ==  1){
+            $pc = Products::where('productPrice', '>',0)->where('productPrice','<',500000)->get();
+            $count = Products::where('productPrice', '>',0)->where('productPrice','<',500000)->count();
+        }
+        else if($a==2){
+            $pc = Products::where('productPrice','>=', 5000000)->Where('productPrice','<=', 1000000)->get();
+            $count = Products::where('productPrice','>=', 500000)->Where('productPrice','<=', 1000000)->count();
+        }
+        else if($a==3){
+            $pc = Products::where('productPrice','>=', 1000000)->Where('productPrice','<=', 2000000)->get();
+            $count = Products::where('productPrice','>=', 1000000)->Where('productPrice','<=', 2000000)->count();
+        }
+        else if($a==4){
+            $pc = Products::where('productPrice','>=', 2000000)->Where('productPrice','<=', 3000000)->get();
+            $count = Products::where('productPrice','>=', 2000000)->Where('productPrice','<=', 3000000)->count();
+        }
+        else{
+            $pc = Products::where('productPrice','>=', 3000000)->Where('productPrice','<=', 1000000000)->get();
+            $count = Products::where('productPrice','>=', 3000000)->Where('productPrice','<=', 100000000)->count();
+        }
+        return view('pages.categories', compact('pc', 'count'));
     }
 }

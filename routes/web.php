@@ -60,3 +60,5 @@ Route::get('/pSearch', 'MyController@pSearch');
 Route::get('/checkout',['as'=>'checkout', 'uses'=>'MyController@checkout']);
 Route::get('/addCart2/{id}', 'MyController@addCart2');
 
+// Updated 6/10/2019. by Ngoc.
+Route::get('/price/{a}', ['as'=>'price','uses'=>'MyController@price']);

@@ -32,10 +32,11 @@
                            <table class="table"><!-- table Begin -->
                                <thead><!-- thead Begin -->
                                    <tr><!-- tr Begin -->
-                                       <th colspan="2">Product</th>
+                                       <th>Product</th>
                                        <th>Quantity</th>
                                        <th>Unit Price</th>
-                                       <th colspan="2">Sub-Total</th>
+                                       <th>Free ship</th>
+                                       <th>Sub-Total</th>
                                    </tr><!-- tr Finish -->
                                </thead><!-- thead Finish -->
 
@@ -44,9 +45,10 @@
                                 @foreach($product_cart as $prd)
                                    <tr><!-- tr Begin -->
                                        <td><img class="img-responsive" src="images/frontend_image/products/{{$prd['item']['productImg1']}}" alt="Product 3a"></td>
-                                       <td><a href="{{route('detail',$prd['item']['productCode'])}}"> </a></td>
+                                       <!-- <td><a href="{{route('detail',$prd['item']['productCode'])}}"></a></td> -->
                                        <td>{{$prd['quantity']}}</td>
                                        <td>{{$prd['item']['productPrice']}}</td>
+                                       <td><i class="glyphicon glyphicon-thumbs-up"></i></td>
                                        <td>{{$prd['quantity']}} * {{$prd['item']['productPrice']}}</td>
                                    </tr><!-- tr Finish -->
                                 @endforeach
@@ -58,8 +60,11 @@
 
                                    <tr><!-- tr Begin -->
 
-                                       <th colspan="5">Total</th>
-                                       <th colspan="2">{{Session('Cart')->totalPrice}}</th>
+                                       <th>Total</th>
+                                       <th></th>
+                                       <th></th>
+                                       <th></th>
+                                       <th colspan="5">{{Session('Cart')->totalPrice}}</th>
 
                                    </tr><!-- tr Finish -->
 

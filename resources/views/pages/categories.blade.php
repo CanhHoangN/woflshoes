@@ -27,12 +27,12 @@
             
                 <div class='box'>
                 
-                    <h1> No Product Found In This Product Categories </h1>
+                    <h1> No Product Found In This Price. </h1>
                 
                 </div>
             
-        		@else
-
+                @else
+                <h4 style="padding-left:1.4em; margin-bottom: 3em">Showing: {{$count}} Items</h4>
         		@foreach($pc as $p)
 
                            <div class="col-sm-3 single"><!-- col-sm-4 col-sm-6 single Begin -->
