@@ -27,13 +27,13 @@
 
                        <div class="col-sm-4 single"><!-- col-sm-4 col-sm-6 single Begin -->
                            <div class="product"><!-- product Begin -->
-                               <div class="img">
+                               <div class="img-shop">
                                    <a href="{{route('detail',$p->productCode)}}">
                                        <img class="img-responsive" src="images/frontend_image/products/{{$p->productImg1}}" alt="Product 1">
                                    </a>
                                </div>
-                               <div class="content-product">
-                                   <div class="text m-left"><!-- text Begin -->
+                               <div class="content-product-shop">
+                                   <div class="text m-left textedit"><!-- text Begin -->
                                        <p>
                                            <a href="{{route('detail',$p->productCode)}}">
                                                {{$p->productName}}
@@ -41,7 +41,7 @@
                                        </p>
                                        <p class="price">{{$p->productPrice}}đ</p>
                                    </div>
-                                   <div class="list-btn m-left">
+                                   <div class="list-btn m-left buttonedit">
                                        <ul>
                                            <li id="detail"><a href="{{route('detail',$p->productCode)}}">View Details</a></li>
                                            <li id="add-cart"><a href="{{route('addcart',$p->productCode)}}">

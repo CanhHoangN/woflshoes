@@ -98,7 +98,7 @@
                             </a>
                         </div>
                         <div class="content-product">
-                            <div class="text m-left"><!-- text Begin -->
+                            <div class="text m-left textedit"><!-- text Begin -->
                                 <p>
                                     <a href="{{route('detail',$p->productCode)}}">
                                         {{$p->productName}}
@@ -106,7 +106,7 @@
                                 </p>
                                 <p class="price">{{$p->productPrice}}đ</p>
                             </div>
-                            <div class="list-btn m-left">
+                            <div class="list-btn m-left buttonedit">
                                 <ul>
                                     <li id="detail"><a href="{{route('detail',$p->productCode)}}">View Details</a></li>
                                     <li id="add-cart"><a href="{{route('addcart',$p->productCode)}}">
