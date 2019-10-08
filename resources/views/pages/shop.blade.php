@@ -24,15 +24,14 @@
                
                <div class="row"><!-- row Begin -->
                @foreach($products as $p)
-
                        <div class="col-sm-4 single"><!-- col-sm-4 col-sm-6 single Begin -->
                            <div class="product"><!-- product Begin -->
-                               <div class="img-shop">
+                               <div class="img">
                                    <a href="{{route('detail',$p->productCode)}}">
                                        <img class="img-responsive" src="images/frontend_image/products/{{$p->productImg1}}" alt="Product 1">
                                    </a>
                                </div>
-                               <div class="content-product-shop">
+                               <div class="content-product">
                                    <div class="text m-left textedit"><!-- text Begin -->
                                        <p>
                                            <a href="{{route('detail',$p->productCode)}}">
@@ -41,7 +40,7 @@
                                        </p>
                                        <p class="price">{{$p->productPrice}}đ</p>
                                    </div>
-                                   <div class="list-btn m-left buttonedit">
+                                   <div class="list-btn m-left list-shop">
                                        <ul>
                                            <li id="detail"><a href="{{route('detail',$p->productCode)}}">View Details</a></li>
                                            <li id="add-cart"><a href="{{route('addcart',$p->productCode)}}">
@@ -52,7 +51,8 @@
                                    </div>
                                </div><!-- text Finish -->
                            </div><!-- product Finish -->
-                       </div><!-- col-sm-4 single Finish -->
+                       </div>
+
                @endforeach
                </div><!-- row Finish -->
                

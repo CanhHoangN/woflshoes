@@ -888,3 +888,11 @@ h2#signup-register {
     font-family: 'Poppins', sans-serif;
     font-size: 35px;
 }
+/* shop */
+.list-shop{
+    margin-left: 30%;
+    margin-top: 0;
+}
+.list-shop #detail {
+    width: 96px;
+}
