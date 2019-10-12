@@ -17,7 +17,7 @@
            
            <div class="col-md-3"><!-- col-md-3 Begin -->
     
-    		@include('layouts.frontLayouts.leftmenu');
+    		@include('layouts.frontLayouts.leftmenu')
                
            </div><!-- col-md-3 Finish -->
            

@@ -34,7 +34,7 @@
                                </div>
                            @endif
                            <div class="username">
-                               <label for="username"><i class="fa fa-envelope"></i></label>
+                               <label for="username"><i class="fa fa-user"></i></label>
                                <input type="text" placeholder="Your Name" name="fullname" id="fullname">
                            </div>
                            <div class="email">

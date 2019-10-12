@@ -19,19 +19,17 @@
                 <li>
                     <a href={{route('cart')}}>Go To Cart</a>
                 </li>
-                <li>
-                    <a href={{route('login')}}>Login</a>
-                </li>
                 @if(Auth::check())
-                <li>
                     <li>
-                      <a href={{route('login')}}>{{Auth::user()->name}}</a>
+                        <a href="#">{{Auth::user()->name}}</a>
                     </li>
                     <li>
                         <a href={{route('logout')}}>Logout</a>
                     </li>
-                </li>
                 @else
+                    <li>
+                        <a href={{route('login')}}>Login</a>
+                    </li>
                     <li>
                         <a href={{route('register')}}>Register</a>
                     </li>

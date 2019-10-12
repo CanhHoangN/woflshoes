@@ -1,3 +1,13 @@
+<?php
+function limit_text($text, $limit) {
+    if (str_word_count($text, 0) > $limit) {
+        $words = str_word_count($text, 2);
+        $pos = array_keys($words);
+        $text = substr($text, 0, $pos[$limit]) . '...';
+    }
+    return $text;
+}
+?>
 @extends('layouts.frontLayouts.master')
 @section('content')
    <div id="content"><!-- #content Begin -->
@@ -34,35 +44,18 @@
                 @else
                 <h4 style="padding-left:1.4em; margin-bottom: 3em">Showing: {{$count}} Items</h4>
         		@foreach($pc as $p)
+                           <div class="col-sm-3">
+                               <div class="card">
+                                   <a href="{{route('detail',$p->productCode)}}">
+                                       <img class='img-responsive' src="{{url('images/frontend_image/products').'/'.$p->productImg1}}">
+                                   </a>
+                                   <h4>{{$p->productName}}</h4>
+                                   <p class="price">{{number_format($p->productPrice)}} VND</p>
+                                   <p id="description">{{limit_text($p->productDescription, 55)}}</p>
+                                   <p><button onclick="window.location='{{route('addcart',$p->productCode)}}';"  href="{{route('addcart',$p->productCode)}}"><i class="fa fa-shopping-cart"></i> Add to Cart</button></p>
+                               </div>
+                           </div>
 
-                           <div class="col-sm-3 single"><!-- col-sm-4 col-sm-6 single Begin -->
-                               <div class="product"><!-- product Begin -->
-                                   <div class="img">
-                                       <a href="{{route('detail',$p->productCode)}}">
-                                           <img class='img-responsive' src="{{url('images/frontend_image/products').'/'.$p->productImg1}}">
-                                       </a>
-                                   </div>
-                                   <div class="content-product">
-                                       <div class="text m-left"><!-- text Begin -->
-                                           <p>
-                                               <a href="{{route('detail',$p->productCode)}}">
-                                                   {{$p->productName}}
-                                               </a>
-                                           </p>
-                                           <p class="price">{{$p->productPrice}}đ</p>
-                                       </div>
-                                       <div class="list-btn m-left">
-                                           <ul>
-                                               <li id="detail"><a href="{{route('detail',$p->productCode)}}">View Details</a></li>
-                                               <li id="add-cart"><a href="{{route('addcart',$p->productCode)}}">
-                                                       <i class="fa fa-shopping-cart"></i><span  class="addtocart">Add to cart</span>
-                                                   </a></li>
-                                           </ul>
-
-                                       </div>
-                                   </div><!-- text Finish -->
-                               </div><!-- product Finish -->
-                           </div><!-- col-sm-4 single Finish -->
                 @endforeach
                 @endif
                

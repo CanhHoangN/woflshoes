@@ -85,10 +85,8 @@
 
                                     </div><!-- col-md-7 Finish -->
                                 </div><!-- form-group Finish -->
-                                <p class="price">{{$productDetail->productPrice}} VND</p>
-                                <p class="text-center buttons">
-                                    <button class="btn btn-primary i fa fa-shopping-cart"> Add to cart</button>
-                                </p>
+                                <p class="price-detail">{{number_format($productDetail->productPrice)}} VND</p>
+                                <button class="btn-primary add-detail"><i style="margin-right: 5px" class="fa fa-shopping-cart"></i>Add to cart</button>
                             </form><!-- form-horizontal Finish -->
 
                         </div><!-- box Finish -->

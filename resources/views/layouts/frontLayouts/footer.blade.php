@@ -1,24 +1,38 @@
-<div id="footer" class="color-div">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="widget">
-                    <h4 class="widget-title">Wolf Shoes</h4>
-                    <div id="beta-instagram-feed"><div></div></div>
+<footer>
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <h4> woflshoes </h4>
                 </div>
+                <div class="col-lg-3 col-sm-2 col-xs-3">
+                    <h3> Contact </h3>
+                    <ul>
+                        <li><a id="email-footer" href="#">woftshoes@gmail.com</a></li>
+                        <br/>
+                        <li> <p> 144 Xuan Thuy - Cau Giay - Ha Noi. Phone: 18008198 </p> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-2 col-xs-3 about-us">
+                    <ul>
+                        <li><a href="#" style="margin-top: 5em"> ABOUT US</a></li>
+                        <li><a href="#"> CURRENT SERIES </a></li>
+                        <li><a href="#"> THE HOUSE </a></li>
+                        <li><a href="#"> LOOKING BACK </a></li>
+                    </ul>
+                </div>
+
+                <!--/.row-->
             </div>
-            <div class="col-sm-8">
-                    <div class="widget">
-                        <h4 class="widget-title">Contact Us</h4>
-                        <div>
-                            <div class="contact-info">
-                                <i class="fa fa-map-marker"></i>
-                                <p>144 Xuan Thuy - Cau Giay - Ha Noi. Phone: 18008198</p>
-                            </div>
-                        </div>
-                    </div>
+            <!--/.container-->
+        </div>
+        <!--/.footer-->
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="pull-left copyright"> Copyright © Footer 2019. All right reserved. </p>
             </div>
-        </div> <!-- .row -->
-    </div> <!-- .container -->
-</div>
-<!-- #footer -->
+        </div>
+        <!--/.footer-bottom-->
+
+</footer>
