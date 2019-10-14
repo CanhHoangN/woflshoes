@@ -1,5 +1,6 @@
 /* update 6/10/2019 */
 
+
 /*.textedit {
     padding-top: 1.5em;
 }
@@ -244,7 +245,8 @@ img.hidden-xs {
     height: 220px;
     width: 90%;
 }
-.list-btn{
+
+.list-btn {
     margin-top: 15%;
 }
 
@@ -260,7 +262,6 @@ li#detail {
     padding: 5px;
     border: none;
     outline: none;
-
     cursor: pointer;
     word-wrap: break-word;
 }
@@ -270,7 +271,6 @@ li#add-cart {
     padding: 5px;
     border: none;
     outline: none;
-
     cursor: pointer;
     text-decoration: none;
 }
@@ -296,6 +296,7 @@ li#detail a {
     font-weight: bold;
     font-size: larger;
 }
+
 textarea.form-control {
     height: auto;
     resize: none;
@@ -322,24 +323,23 @@ textarea.form-control {
 @media screen and (max-width: 1200px) and (min-width: 769px) {
     .product {
         height: auto;
-
     }
     .content-product {
         height: 160px;
     }
-    .list-btn{
+    .list-btn {
         margin-left: 25%;
     }
-    .text p a{
+    .text p a {
         font-size: 15px;
     }
-    .text p{
+    .text p {
         font-size: 15px;
     }
-    li#detail{
+    li#detail {
         width: 96px;
     }
-    .list-btn{
+    .list-btn {
         margin-top: 0;
     }
 }
@@ -350,49 +350,50 @@ textarea.form-control {
         margin-left: 30px;
     }
 }
+
 @media(max-width:762px) {
-    .product{
+    .product {
         margin-left: 65%;
         width: 80%;
-
     }
-    .list-btn{
+    .list-btn {
         margin-left: 30%;
     }
-    li#detail{
+    li#detail {
         width: 96px;
     }
-    .list-btn{
+    .list-btn {
         margin-left: 28%;
     }
 }
+
 @media (max-width: 557px) {
-    .product{
+    .product {
         margin-left: 50%;
         width: 100%;
     }
-    .text p a{
+    .text p a {
         font-size: 15px;
     }
-    .text p{
+    .text p {
         font-size: 15px;
     }
-    li#detail{
+    li#detail {
         padding: 6px;
-
     }
-    li#add-cart{
-       padding: 6px;
+    li#add-cart {
+        padding: 6px;
     }
 }
+
 @media(max-width:493px) {
     .product {
         height: auto;
     }
-    .text p a{
+    .text p a {
         font-size: 12px;
     }
-    .text p{
+    .text p {
         font-size: 12px;
     }
     .price {
@@ -406,51 +407,51 @@ textarea.form-control {
         margin: 0;
         transform: scale(0.8);
     }
-    .list-btn{
+    .list-btn {
         margin-left: 25%;
     }
 }
+
 @media (max-width: 414px) {
-    .product{
+    .product {
         margin-left: 40%;
         width: 150%;
     }
-    .text p a{
+    .text p a {
         font-size: 15px;
     }
-    .text p{
+    .text p {
         font-size: 15px;
     }
-    li#detail{
+    li#detail {
         width: 120px;
         margin: 0;
         padding: 10px;
-
     }
-    li#add-cart{
+    li#add-cart {
         width: 120px;
         padding: 10px;
         margin: 0;
     }
 }
+
 @media(max-width: 375px) {
-    .product{
+    .product {
         margin-left: 40%;
         width: 150%;
     }
-    .text p a{
+    .text p a {
         font-size: 15px;
     }
-    .text p{
+    .text p {
         font-size: 15px;
     }
-    li#detail{
+    li#detail {
         width: 120px;
         margin: 0;
         padding: 10px;
-
     }
-    li#add-cart{
+    li#add-cart {
         width: 120px;
         padding: 10px;
         margin: 0;
@@ -670,7 +671,6 @@ ul.breadcrumb li a:hover {
 
 /*  Footer Styles  */
 
-
 .addtocart {
     font-family: 'Lato', sans-serif;
     margin-left: 5px;
@@ -718,6 +718,7 @@ i.fa.fa-envelope {
     left: 2%;
     /* padding: 9px; */
 }
+
 i.fa.fa-user {
     /* border-bottom: 1px solid; */
     position: absolute;
@@ -841,24 +842,33 @@ h2#signup-register {
     font-family: 'Poppins', sans-serif;
     font-size: 35px;
 }
+
+
 /* shop */
-.list-shop{
+
+.list-shop {
     margin-left: 30%;
     margin-top: 0;
 }
+
 .list-shop #detail {
     width: 96px;
 }
+
+
 /* footer */
+
 .full {
     width: 100%;
 }
+
 .gap {
     height: 30px;
     width: 100%;
     clear: both;
     display: block;
 }
+
 .footer {
     background: #0a5588;
     height: auto;
@@ -869,12 +879,15 @@ h2#signup-register {
     border-bottom: 1px solid #CCCCCC;
     border-top: 1px solid #DDDDDD;
 }
+
 .footer p {
     margin: 0;
 }
+
 .footer img {
     max-width: 100%;
 }
+
 .footer h3 {
     color: white;
     font-size: 18px;
@@ -904,10 +917,12 @@ h2#signup-register {
     color: #7F8C8D;
     padding: 0 0 8px 0;
 }
+
 button.btn-primary.add-detail {
     margin-left: 45%;
 }
-#email-footer{
+
+#email-footer {
     color: #FFFF;
     border-bottom: 3px solid #FFFF;
 }
@@ -916,6 +931,7 @@ button.btn-primary.add-detail {
     padding: 0 0 12px 0;
     display: block;
 }
+
 .footer a {
     color: white;
     font-weight: lighter;
@@ -924,13 +940,13 @@ button.btn-primary.add-detail {
 .footer p {
     color: white;
     font-weight: lighter;
-
 }
 
 .footer a:hover {
-    text-decoration:none;
+    text-decoration: none;
     font-weight: bold;
 }
+
 .supportLi h4 {
     font-size: 20px;
     font-weight: lighter;
@@ -954,23 +970,26 @@ button.btn-primary.add-detail {
     padding-top: 20px;
     padding-bottom: 10px;
 }
+
 .footer-bottom p.pull-left {
     padding-top: 6px;
     font-size: 0.75em
 }
+
 .col-lg-3.col-sm-2.col-xs-3.about-us ul li {
     padding: 5.5px;
     color: white;
 }
+
 .col-lg-3.col-sm-2.col-xs-3.about-us ul li a {
     color: white;
 }
+
 #content .panel.sidebar-menu ul.nav.category-menu li a {
     text-transform: uppercase;
     font-weight: 600;
     padding: 8px;
 }
-
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -984,12 +1003,14 @@ button.btn-primary.add-detail {
     color: #de1818;
     font-size: 22px;
 }
-.price-detail{
+
+.price-detail {
     color: #de1818;
     font-size: 22px;
     margin-left: 40%;
 }
-.card img{
+
+.card img {
     width: 100%;
     height: 266px;
 }
@@ -1005,11 +1026,8 @@ button.btn-primary.add-detail {
     width: 100%;
     font-size: 18px;
 }
-#description{
+
+#description {
     height: 80px;
     overflow: hidden;
 }
-
-
-
-
