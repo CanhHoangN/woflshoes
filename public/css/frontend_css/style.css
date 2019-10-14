@@ -31,7 +31,7 @@ body {
     color: #333333;
     background: #f0f0f0;
     overflow-x: hidden;
-    font-family: 'Lato', sans-serif;
+
 }
 
 
@@ -229,7 +229,8 @@ img.hidden-xs {
 }
 
 #content {
-    padding-left: 0;
+    padding-left: 20px;
+    font-family: 'Lato', sans-serif;
 }
 
 .single {
@@ -860,7 +861,7 @@ h2#signup-register {
     display: block;
 }
 .footer {
-    background: #0a5588;
+    background: #555555;
     height: auto;
     margin-top: 8%;
     padding-bottom: 30px;
@@ -868,6 +869,7 @@ h2#signup-register {
     width: 100%;
     border-bottom: 1px solid #CCCCCC;
     border-top: 1px solid #DDDDDD;
+    font-family: 'Lato', sans-serif;
 }
 .footer p {
     margin: 0;

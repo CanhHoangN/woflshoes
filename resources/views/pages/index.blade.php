@@ -108,7 +108,7 @@ function limit_text($text, $limit) {
                         <h4>{{$p->productName}}</h4>
                         <p class="price">{{number_format($p->productPrice)}} VND</p>
                         <p id="description">{{limit_text($p->productDescription, 55)}}</p>
-                        <p><button onclick="window.location='{{route('addcart',$p->productCode)}}';"  href="{{route('addcart',$p->productCode)}}"><i class="fa fa-shopping-cart"></i> Add to Cart</button></p>
+                        <p><button onclick="window.location='{{route('addcart',$p->productCode)}}';"  href="{{route('addcart',$p->productCode)}}"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng</button></p>
                     </div>
                 </div>
 

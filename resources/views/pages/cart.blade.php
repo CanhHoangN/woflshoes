@@ -64,7 +64,7 @@
                                        <th></th>
                                        <th></th>
                                        <th></th>
-                                       <th colspan="5">{{Session('Cart')->totalPrice}}</th>
+                                       <th colspan="5">{{number_format(Session('Cart')->totalPrice)}}</th>
 
                                    </tr><!-- tr Finish -->
 
@@ -128,7 +128,7 @@
 
                                <tr><!-- tr Begin -->
 
-                                   <td> Order All Sub-Total </td>
+                                   <td>Sub-Total</td>
                                    <th> {{Session('Cart')->totalQuantity}} </th>
 
                                </tr><!-- tr Finish -->
@@ -143,7 +143,7 @@
                                <tr class="total"><!-- tr Begin -->
 
                                    <td> Total </td>
-                                   <th> {{Session('Cart')->totalPrice}} </th>
+                                   <th> {{number_format(Session('Cart')->totalPrice)}} </th>
 
                                </tr><!-- tr Finish -->
 

@@ -17,21 +17,21 @@
 
             <ul class="menu"><!-- cmenu Begin -->
                 <li>
-                    <a href={{route('cart')}}>Go To Cart</a>
+                    <a href={{route('cart')}}>Giỏ hàng</a>
                 </li>
                 @if(Auth::check())
                     <li>
                         <a href="#">{{Auth::user()->name}}</a>
                     </li>
                     <li>
-                        <a href={{route('logout')}}>Logout</a>
+                        <a href={{route('logout')}}>Đăng xuất</a>
                     </li>
                 @else
                     <li>
-                        <a href={{route('login')}}>Login</a>
+                        <a href={{route('login')}}>Đăng nhập</a>
                     </li>
                     <li>
-                        <a href={{route('register')}}>Register</a>
+                        <a href={{route('register')}}>Đăng ký</a>
                     </li>
                 @endif
 
@@ -78,17 +78,17 @@
 
                 <ul class="nav navbar-nav left"><!-- nav navbar-nav left Begin -->
 
-                    <li class="active">
-                        <a href={{route('index')}}>Home</a>
+                    <li>
+                        <a href={{route('index')}}>TRANG CHỦ</a>
                     </li>
                     <li>
                         <a href={{route('shop')}}>Shop</a>
                     </li>
                     <li>
-                        <a href={{route('cart')}}>Shopping Cart</a>
+                        <a href={{route('cart')}}>GIỎ HÀNG</a>
                     </li>
                     <li>
-                        <a href={{route('postContact')}}>Contact Us</a>
+                        <a href={{route('postContact')}}>LIÊN HỆ</a>
                     </li>
 
                 </ul><!-- nav navbar-nav left Finish -->
@@ -99,7 +99,7 @@
 
                 <i class="fa fa-shopping-cart"></i>
                 @if(Session::has('Cart'))
-                    <span>{{Session('Cart')->totalQuantity}} Items In Your Cart</span>
+                    <span>{{Session('Cart')->totalQuantity}} sản phẩm trong giỏ hàng</span>
                 @else
                     <span>Giỏ hàng trống</span>
                 @endif

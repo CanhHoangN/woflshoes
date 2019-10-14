@@ -29,7 +29,7 @@
                 <div class="col-sm-6">
                     <form method="post" action="{!! url('login') !!}">
                         @csrf
-                        <h2 id="signup">Sign Up</h2>
+                        <h2 id="signup">Sign In</h2>
                         @if(Session::has('flag'))
                             <div class="alert-{{Session::get('flag')}}">{{Session::get('message')}}</div>
                         @endif
