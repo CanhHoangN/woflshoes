@@ -45,7 +45,8 @@ class MyController extends Controller
             ->select('p.*', 'pl.*')
             ->where('p.productCode', '=', $id)
             ->first();
-        return view('pages.detail', compact('productDetail', 'productLine'));
+        $products = Products::where('approved', '1')->paginate(9);
+        return view('pages.detail', compact('productDetail', 'productLine', 'products'));
     }
     public function getContact()
     {
