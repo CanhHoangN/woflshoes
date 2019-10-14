@@ -6,7 +6,7 @@
 
             <a href="#" class="btn btn-success btn-sm">Welcome</a>
             @if(Session::has('Cart'))
-               <a style="margin-left: 10px" href={{url('/cart')}}>{{Session('Cart')->totalQuantity}} Items In Your Cart | Total Price: $ {{Session('Cart')->totalPrice}} </a>
+               <a style="margin-left: 10px" href={{url('/cart')}}>{{Session('Cart')->totalQuantity}} sản phẩm trong giỏi hàng | Tổng tiền: $ {{Session('Cart')->totalPrice}} </a>
             @else
                <a href={{url('/cart')}}>Chưa có sản phẩm trong giỏ hàng | Total Price: $ 0</a>
             @endif
@@ -95,16 +95,16 @@
 
             </div><!-- padding-nav Finish -->
 
-            <a href="{{url('/cart')}}" class="btn navbar-btn btn-primary right"><!-- btn navbar-btn btn-primary Begin -->
+            <a href="{{url('/cart')}}" class="btn navbar-btn btn-primary right">
 
-                <i class="fa fa-shopping-cart"></i>
+               <i class="fa fa-shopping-cart"></i>
                 @if(Session::has('Cart'))
                     <span>{{Session('Cart')->totalQuantity}} sản phẩm trong giỏ hàng</span>
                 @else
                     <span>Giỏ hàng trống</span>
                 @endif
 
-            </a><!-- btn navbar-btn btn-primary Finish -->
+            </a>
 
             <div class="navbar-collapse collapse right"><!-- navbar-collapse collapse right Begin -->
 

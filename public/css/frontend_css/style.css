@@ -32,6 +32,7 @@ body {
     color: #333333;
     background: #f0f0f0;
     overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
 
 }
 
@@ -177,6 +178,7 @@ img.hidden-xs {
     background: #ffffff;
     margin: 0 0 30px;
     border: solid 1px #e6e6e6;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     padding: 29px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, .3);
@@ -783,7 +785,7 @@ h2#signup {
     padding: 0;
     font-weight: bold;
     color: #222;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 35px;
 }
 
@@ -792,6 +794,7 @@ h2#signup {
     padding-top: 67px;
     padding-bottom: 55px;
     border-radius: 15px;
+    font-family: 'Roboto', sans-serif;
     box-shadow: 0 7px 3px rgba(0, 0, 0, 0.30), 0 6px 10px rgba(0, 0, 0, 0.22);
 }
 
@@ -807,7 +810,7 @@ input#remember {
 
 .remember span {
     color: #222222;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 ::-webkit-input-placeholder {
@@ -823,7 +826,7 @@ input#remember {
 ::placeholder {
     color: #999;
     font-size: 11px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .register {
@@ -840,7 +843,7 @@ h2#signup-register {
     padding: 0;
     font-weight: bold;
     color: #222;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 35px;
 }
 
@@ -879,7 +882,7 @@ h2#signup-register {
     width: 100%;
     border-bottom: 1px solid #CCCCCC;
     border-top: 1px solid #DDDDDD;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .footer p {
@@ -1009,7 +1012,7 @@ button.btn-primary.add-detail {
 .price-detail {
     color: #de1818;
     font-size: 22px;
-    margin-left: 40%;
+    margin-left: 45%;
 }
 
 .card img {
@@ -1032,4 +1035,8 @@ button.btn-primary.add-detail {
 #description {
     height: 80px;
     overflow: hidden;
+}
+.col-lg-3.col-sm-2.col-xs-3.about-us ul li {
+    padding: 2px;
+    color: white;
 }

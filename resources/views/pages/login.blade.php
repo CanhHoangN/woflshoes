@@ -29,22 +29,22 @@
                 <div class="col-sm-6">
                     <form method="post" action="{!! url('login') !!}">
                         @csrf
-                        <h2 id="signup">Sign In</h2>
+                        <h2 id="signup">Đăng nhập</h2>
                         @if(Session::has('flag'))
                             <div class="alert-{{Session::get('flag')}}">{{Session::get('message')}}</div>
                         @endif
                         <div class="email">
                             <label for="email"><i class="fa fa-envelope"></i></label>
-                            <input type="email" placeholder="Your Email" name="email" id="email" required>
+                            <input type="email" placeholder="Email" name="email" id="email" required>
                         </div>
                         <div class="password">
                             <label for="password"><i class="fa fa-lock"></i></label>
-                            <input type="password" placeholder="Password" name="password" id="password" required>
+                            <input type="password" placeholder="Mật khẩu" name="password" id="password" required>
                         </div>
                         <div class="remember">
-                            <input type="checkbox" name="remember" id="remember"><label for="remember"><span>Remember me</span></label>
+                            <input type="checkbox" name="remember" id="remember"><label for="remember"><span>Ghi nhớ</span></label>
                         </div>
-                        <input type="submit" value="Login">
+                        <input type="submit" value="Đăng nhập">
 
                     </form>
                 </div>

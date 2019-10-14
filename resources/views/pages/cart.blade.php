@@ -21,7 +21,7 @@
 
                    <form action="cart.php" method="post" enctype="multipart/form-data"><!-- form Begin -->
 
-                       <h1>Shopping Cart</h1>
+                       <h1>Giỏ hàng</h1>
                        @if(Session::has('Cart'))
                        <p class="text-muted">Bạn đang có {{Session('Cart')->totalQuantity}} sản phẩm trong giỏ hàng.</p>
                        @else
@@ -32,11 +32,11 @@
                            <table class="table"><!-- table Begin -->
                                <thead><!-- thead Begin -->
                                    <tr><!-- tr Begin -->
-                                       <th>Product</th>
-                                       <th>Quantity</th>
-                                       <th>Unit Price</th>
-                                       <th>Free ship</th>
-                                       <th>Sub-Total</th>
+                                       <th>Sản phẩm</th>
+                                       <th>Số lượng</th>
+                                       <th>Giá hiện tại</th>
+                                       <th>Miễn phí vận chuyển</th>
+                                       <th>Tổng tiền</th>
                                    </tr><!-- tr Finish -->
                                </thead><!-- thead Finish -->
 
@@ -60,7 +60,7 @@
 
                                    <tr><!-- tr Begin -->
 
-                                       <th>Total</th>
+                                       <th>Tổng</th>
                                        <th></th>
                                        <th></th>
                                        <th></th>
@@ -81,7 +81,7 @@
 
                                <a href="{{asset('/')}}" class="btn btn-default"><!-- btn btn-default Begin -->
 
-                                   <i class="fa fa-chevron-left"></i> Continue Shopping
+                                   <i class="fa fa-chevron-left"></i> Tiếp tục mua sắm
 
                                </a><!-- btn btn-default Finish -->
 
@@ -116,7 +116,7 @@
 
                    <p class="text-muted"><!-- text-muted Begin -->
 
-                       Shipping and additional costs are calculated based on value you have entered
+                       Vận chuyển và chi phí bổ sung được tính dựa trên giá trị bạn đã nhập
 
                    </p><!-- text-muted Finish -->
 
@@ -128,21 +128,21 @@
 
                                <tr><!-- tr Begin -->
 
-                                   <td>Sub-Total</td>
+                                   <td>Tổng tiền</td>
                                    <th> {{Session('Cart')->totalQuantity}} </th>
 
                                </tr><!-- tr Finish -->
 
                                <tr><!-- tr Begin -->
 
-                                   <td> Tax </td>
+                                   <td> Thuế </td>
                                    <th> $0 </th>
 
                                </tr><!-- tr Finish -->
 
                                <tr class="total"><!-- tr Begin -->
 
-                                   <td> Total </td>
+                                   <td> Tổng tiền </td>
                                    <th> {{number_format(Session('Cart')->totalPrice)}} </th>
 
                                </tr><!-- tr Finish -->

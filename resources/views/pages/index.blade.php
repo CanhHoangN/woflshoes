@@ -29,7 +29,7 @@ function limit_text($text, $limit) {
                         </div><!-- icon Finish -->
 
                         <h3><a href="{{url('detail/4')}}">Popular</a></h3>
-                        <p>The most popular product</p>
+                        <p>Sản phẩm phổ biến nhất</p>
 
                     </div><!-- box same-height Finish -->
 
@@ -47,7 +47,7 @@ function limit_text($text, $limit) {
 
                         <h3><a href="{{url('detail/7')}}">Classic</a></h3>
 
-                        <p>products with classic qualities</p>
+                        <p>sản phẩm có phẩm chất cổ điển</p>
 
                     </div><!-- box same-height Finish -->
 
@@ -65,7 +65,7 @@ function limit_text($text, $limit) {
 
                         <h3><a href="{{url('detail/8')}}">Nice</a></h3>
 
-                        <p>Very beautiful product</p>
+                        <p>Sản phẩm độc đáo</p>
 
                     </div><!-- box same-height Finish -->
 
@@ -86,7 +86,7 @@ function limit_text($text, $limit) {
                 <div class="col-md-12"><!-- col-md-12 Begin -->
 
                     <h2>
-                        Our Latest Products
+                        Một số sản phẩm mới
                     </h2>
 
                 </div><!-- col-md-12 Finish -->

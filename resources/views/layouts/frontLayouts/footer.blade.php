@@ -15,9 +15,9 @@
                 </div>
                 <div class="col-lg-3 col-sm-2 col-xs-3 about-us">
                     <ul>
-                        <li><a href="#" style="margin-top: 5em"> ABOUT US</a></li>
-                        <li><a href="#"> CURRENT SERIES </a></li>
-                        <li><a href="#"> THE HOUSE </a></li>
+                        <li><a href="#" style="margin-top: 5em">THÔNG TIN VỀ CHÚNG TÔI</a></li>
+                        <li><a href="#"> SERIES HIỆN TẠI </a></li>
+                        <li><a href="#"> NGÔI NHÀ </a></li>
                         <li><a href="#"> LOOKING BACK </a></li>
                     </ul>
                 </div>
