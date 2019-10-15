@@ -19,8 +19,8 @@
     @include('layouts.frontLayouts.leftmenu')
                
         </div><!-- col-md-3 Finish -->
-           <div class="col-md-9"> </div>
-           <div class="col-md-8">
+
+           <div class="col-md-9">
                <div class="row register">
                    <div class="col-sm-6 register-form">
                        <h2 id="signup-register">Đăng ký</h2>
