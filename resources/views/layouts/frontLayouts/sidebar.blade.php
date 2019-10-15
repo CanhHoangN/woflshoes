@@ -16,20 +16,20 @@
                <div class="carousel-inner"><!-- carousel-inner Begin -->
                    
                    <div class="item active">
-                       
-                       <img src="{{asset('images/frontend_image/slide/slide1.jpg')}}" alt="Slider Image 1">
-                       
-                   </div>
-                   
-                   <div class="item">
-                       
-                       <img src="{{asset('images/frontend_image/slide/slide2.jpg')}}" alt="Slider Image 2">
+
+                       <a href="{{route('detail',9)}}"><img src="{{asset('images/frontend_image/slide/slide1.jpg')}}" alt="Slider Image 1"></a>
                        
                    </div>
                    
                    <div class="item">
+
+                       <a href="{{route('detail',1)}}"><img src="{{asset('images/frontend_image/slide/slide2.jpg')}}" alt="Slider Image 2"></a>
                        
-                       <img src="{{asset('images/frontend_image/slide/slide3.jpg')}}">
+                   </div>
+                   
+                   <div class="item">
+
+                       <a href="{{route('detail',8)}}"><img src="{{asset('images/frontend_image/slide/slide3.jpg')}}"></a>
                        
                    </div>                   
                </div><!-- carousel-inner Finish -->
