@@ -28,11 +28,6 @@
         </div>
         <!--/.footer-->
 
-        <div class="footer-bottom">
-            <div class="container">
-                <p class="pull-left copyright"> Copyright © Footer 2019. All right reserved. </p>
-            </div>
-        </div>
-        <!--/.footer-bottom-->
+
 
 </footer>

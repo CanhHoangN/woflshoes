@@ -89,6 +89,7 @@ body {
 
 #top ul.menu>li a {
     color: #eeeeee;
+    font-size: 14px;
 }
 
 #top ul.menu>li+li:before {
@@ -151,7 +152,7 @@ img.hidden-xs {
 
 #search {
     clear: both;
-    border-top: solid 1px #9adacd;
+    border-top: solid 1px #2582c1;
     text-align: right;
 }
 
@@ -301,7 +302,7 @@ li#detail a {
 }
 
 textarea.form-control {
-    height: auto;
+    height: 120px;
     resize: none;
 }
 
@@ -1000,6 +1001,7 @@ button.btn-primary.add-detail {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     margin: auto;
+    margin-bottom: 25px;
     text-align: center;
     font-family: 'Lato', sans-serif;
 }
@@ -1039,4 +1041,11 @@ button.btn-primary.add-detail {
 .col-lg-3.col-sm-2.col-xs-3.about-us ul li {
     padding: 2px;
     color: white;
+}
+button.btn-primary.add-detail {
+    margin-left: 45%;
+    padding: 6px;
+}
+.totalPrice{
+    color: red !important;
 }

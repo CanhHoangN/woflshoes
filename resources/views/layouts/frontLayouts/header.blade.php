@@ -16,9 +16,9 @@
         <div class="col-md-6"><!-- col-md-6 Begin -->
 
             <ul class="menu"><!-- cmenu Begin -->
-                <li>
+              <!--  <li>
                     <a href={{route('cart')}}>Giỏ hàng</a>
-                </li>
+                </li>-->
                 @if(Auth::check())
                     <li>
                         <a href="#">{{Auth::user()->name}}</a>

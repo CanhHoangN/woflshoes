@@ -33,7 +33,7 @@
                            
                            <p class="text-muted"><!-- text-muted Begin -->
                                
-                               If you have any questions!
+                               Nếu bạn có bất kì câu hỏi nào !
                                
                            </p><!-- text-muted Finish -->
                            
@@ -42,19 +42,19 @@
                        <form id="contact" action="{!! url('contact') !!}" method="post">
                           <input type= "hidden" name= "_token" value= "{!! csrf_token() !!}" />
                           <fieldset>
-                            <input name= "name" class="form-control" placeholder="Your name" type="text" tabindex="1" required autofocus>
+                            <input name= "name" class="form-control" placeholder="Tên của bạn" type="text" tabindex="1" required autofocus>
                           </fieldset>
 
                           <br>
 
                           <fieldset>
-                            <input name= "email" class="form-control" placeholder="Your Email Address" type="email" tabindex="2" required>
+                            <input name= "email" class="form-control" placeholder="Email của bạn" type="email" tabindex="2" required>
                           </fieldset>
 
                           <br>
 
                           <fieldset>
-                            <textarea name= "subject" class="form-control" placeholder="Type your subject here...." tabindex="5" required></textarea>
+                            <textarea name= "subject" class="form-control" placeholder="Nội dung...." tabindex="5" required></textarea>
                           </fieldset>
 
                           <br>

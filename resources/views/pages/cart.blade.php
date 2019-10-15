@@ -64,7 +64,7 @@
                                        <th></th>
                                        <th></th>
                                        <th></th>
-                                       <th colspan="5">{{number_format(Session('Cart')->totalPrice)}}</th>
+                                       <th class="totalPrice" colspan="5">{{number_format(Session('Cart')->totalPrice)}}</th>
 
                                    </tr><!-- tr Finish -->
 
@@ -128,7 +128,7 @@
 
                                <tr><!-- tr Begin -->
 
-                                   <td>Tổng tiền</td>
+                                   <td>Số lượng</td>
                                    <th> {{Session('Cart')->totalQuantity}} </th>
 
                                </tr><!-- tr Finish -->
@@ -143,7 +143,7 @@
                                <tr class="total"><!-- tr Begin -->
 
                                    <td> Tổng tiền </td>
-                                   <th> {{number_format(Session('Cart')->totalPrice)}} </th>
+                                   <th class="totalPrice"> {{number_format(Session('Cart')->totalPrice)}} </th>
 
                                </tr><!-- tr Finish -->
 
