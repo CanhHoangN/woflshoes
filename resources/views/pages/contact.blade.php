@@ -1,43 +1,42 @@
 @extends('layouts.frontLayouts.master')
 @section('content')
-<div id="content"><!-- #content Begin -->
-       <div class="container"><!-- container Begin -->
-           <div class="col-md-12"><!-- col-md-12 Begin -->
+<div id="content">
+       <div class="container">
+           <div class="col-md-12">
                
-               <ul class="breadcrumb"><!-- breadcrumb Begin -->
+               <ul class="breadcrumb">
                    <li>
                        <a href={{url('/')}}>Home</a>
                    </li>
                    <li>
                        Contact Us
                    </li>
-               </ul><!-- breadcrumb Finish -->
+               </ul>
                
-           </div><!-- col-md-12 Finish -->
+           </div>
            
-           <div class="col-md-3"><!-- col-md-3 Begin -->
-    
+           <div class="col-md-3">
     		@include('layouts.frontLayouts.leftmenu')
                
-           </div><!-- col-md-3 Finish -->
+           </div>
            
-           <div class="col-md-9"><!-- col-md-9 Begin -->
+           <div class="col-md-9">
                
-               <div class="box"><!-- box Begin -->
+               <div class="box">
                    
-                   <div class="box-header"><!-- box-header Begin -->
+                   <div class="box-header">
                        
-                       <center><!-- center Begin -->
+                       <center>
                            
                            <img src="{{asset('images/frontend_image/logo/logo1.png')}}" alt="wolfshop Logo" class="hidden-xs">
                            
-                           <p class="text-muted"><!-- text-muted Begin -->
+                           <p class="text-muted">
                                
                                Nếu bạn có bất kì câu hỏi nào !
                                
-                           </p><!-- text-muted Finish -->
+                           </p>
                            
-                       </center><!-- center Finish -->
+                       </center>
                        
                        <form id="contact" action="{!! url('contact') !!}" method="post">
                           <input type= "hidden" name= "_token" value= "{!! csrf_token() !!}" />
@@ -66,12 +65,12 @@
                           </div>
                         </form>
                          
-                   </div><!-- box-header Finish -->
+                   </div>
                    
-               </div><!-- box Finish -->
+               </div>
                
-           </div><!-- col-md-9 Finish -->
+           </div>
            
-       </div><!-- container Finish -->
-   </div><!-- #content Finish -->
+       </div>
+   </div>
    @endsection()

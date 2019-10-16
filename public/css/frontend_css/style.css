@@ -834,7 +834,7 @@ input#remember {
     background: #fff;
     padding-top: 82px;
     padding-left: 25px;
-    padding-bottom: 120px;
+    padding-bottom: 105px;
     border-radius: 15px;
     box-shadow: 0 7px 3px rgba(0, 0, 0, 0.30), 0 6px 10px rgba(0, 0, 0, 0.22);
 }
@@ -1049,4 +1049,18 @@ button.btn-primary.add-detail {
 }
 .totalPrice{
     color: red !important;
+}
+.login-failed.alert-danger {
+    width: 80%;
+    padding-left: 5px;
+    margin-left: 4px;
+    margin-bottom: 10px;
+    /* margin-left: 10px; */
+    /* padding: 1px; */
+}
+.login-failed.alert-success {
+    width: 80%;
+    padding-left: 5px;
+    margin-left: 4px;
+    margin-bottom: 10px;
 }

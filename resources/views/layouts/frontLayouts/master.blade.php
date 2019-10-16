@@ -14,11 +14,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-<!--Header-part-->
 @include('layouts.frontLayouts.header')
-<!--Content-part-->
 @yield('content')
-<!--Footer-part-->
 @include('layouts.frontLayouts.footer')
 
 <script src="{{asset('js/frontend_js/jquery-331.min.js')}}"></script>

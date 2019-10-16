@@ -1,21 +1,21 @@
-<div id="top"><!-- Top Begin -->
+<div id="top">
 
-    <div class="container"><!-- container Begin -->
+    <div class="container">
 
-        <div class="col-md-6 offer"><!-- col-md-6 offer Begin -->
+        <div class="col-md-6 offer">
 
-            <a href="#" class="btn btn-success btn-sm">Welcome</a>
+            <a href="#" class="btn btn-success btn-sm">Xin chào</a>
             @if(Session::has('Cart'))
                <a style="margin-left: 10px" href={{url('/cart')}}>{{Session('Cart')->totalQuantity}} sản phẩm trong giỏi hàng | Tổng tiền: $ {{Session('Cart')->totalPrice}} </a>
             @else
                <a href={{url('/cart')}}>Chưa có sản phẩm trong giỏ hàng | Total Price: $ 0</a>
             @endif
 
-        </div><!-- col-md-6 offer Finish -->
+        </div>
 
-        <div class="col-md-6"><!-- col-md-6 Begin -->
+        <div class="col-md-6">
 
-            <ul class="menu"><!-- cmenu Begin -->
+            <ul class="menu">
               <!--  <li>
                     <a href={{route('cart')}}>Giỏ hàng</a>
                 </li>-->
@@ -35,20 +35,20 @@
                     </li>
                 @endif
 
-            </ul><!-- menu Finish -->
+            </ul>
 
-        </div><!-- col-md-6 Finish -->
+        </div>
 
-    </div><!-- container Finish -->
+    </div>
 
-</div><!-- Top Finish -->
+</div>
 
-<div id="navbar" class="navbar navbar-default"><!-- navbar navbar-default Begin -->
+<div id="navbar" class="navbar navbar-default">
 
-    <div class="container"><!-- container Begin -->
+    <div class="container">
 
-        <div class="navbar-header"><!-- navbar-header Begin -->
-            <a href={{route('index')}} class="navbar-brand"><!-- navbar-brand home Begin -->
+        <div class="navbar-header">
+            <a href={{route('index')}} class="navbar-brand">
                 <img src="{{asset('images/frontend_image/logo/logo1.png')}}" alt="M-dev-Store Logo" class="hidden-xs">
                 <!--<img src="{{asset('images/frontend_image/logo/logo1.png')}}" alt="M-dev-Store Logo Mobile" class="visible-xs">-->
 
@@ -70,19 +70,19 @@
 
             </button>
 
-        </div><!-- navbar-header Finish -->
+        </div>
 
-        <div class="navbar-collapse collapse" id="navigation"><!-- navbar-collapse collapse Begin -->
+        <div class="navbar-collapse collapse" id="navigation">
 
-            <div class="padding-nav"><!-- padding-nav Begin -->
+            <div class="padding-nav">
 
-                <ul class="nav navbar-nav left"><!-- nav navbar-nav left Begin -->
+                <ul class="nav navbar-nav left">
 
                     <li>
                         <a href={{route('index')}}>TRANG CHỦ</a>
                     </li>
                     <li>
-                        <a href={{route('shop')}}>Shop</a>
+                        <a href={{route('shop')}}>Mặt HÀNG</a>
                     </li>
                     <li>
                         <a href={{route('cart')}}>GIỎ HÀNG</a>
@@ -91,9 +91,9 @@
                         <a href={{route('postContact')}}>LIÊN HỆ</a>
                     </li>
 
-                </ul><!-- nav navbar-nav left Finish -->
+                </ul>
 
-            </div><!-- padding-nav Finish -->
+            </div>
 
             <a href="{{url('/cart')}}" class="btn navbar-btn btn-primary right">
 
@@ -106,7 +106,7 @@
 
             </a>
 
-            <div class="navbar-collapse collapse right"><!-- navbar-collapse collapse right Begin -->
+            <div class="navbar-collapse collapse right">
 
                 <button class="btn btn-primary navbar-btn" type="button" data-toggle="collapse" data-target="#search"><!-- btn btn-primary navbar-btn Begin -->
 
@@ -114,36 +114,36 @@
 
                     <i class="fa fa-search"></i>
 
-                </button><!-- btn btn-primary navbar-btn Finish -->
+                </button>
 
-            </div><!-- navbar-collapse collapse right Finish -->
+            </div>
 
-            <div class="collapse clearfix" id="search"><!-- collapse clearfix Begin -->
+            <div class="collapse clearfix" id="search">
 
-                <form method="get" action="{{url('/pSearch')}}" class="navbar-form"><!-- navbar-form Begin -->
+                <form method="get" action="{{url('/pSearch')}}" class="navbar-form">
 
-                    <div class="input-group"><!-- input-group Begin -->
+                    <div class="input-group">
 
                         <input type="text" class="form-control" placeholder="Search" name="pSearch" required>
 
-                        <span class="input-group-btn"><!-- input-group-btn Begin -->
+                        <span class="input-group-btn">
 
-                           <button type="submit" name="search" value="Search" class="btn btn-primary"><!-- btn btn-primary Begin -->
+                           <button type="submit" name="search" value="Search" class="btn btn-primary">
 
                                <i class="fa fa-search"></i>
 
-                           </button><!-- btn btn-primary Finish -->
+                           </button>
 
-                           </span><!-- input-group-btn Finish -->
+                           </span>
 
-                    </div><!-- input-group Finish -->
+                    </div>
 
-                </form><!-- navbar-form Finish -->
+                </form>
 
-            </div><!-- collapse clearfix Finish -->
+            </div>
 
-        </div><!-- navbar-collapse collapse Finish -->
+        </div>
 
-    </div><!-- container Finish -->
+    </div>
 
-</div><!-- navbar navbar-default Finish -->
+</div>

@@ -6,7 +6,7 @@
                     <h4> woflshoes </h4>
                 </div>
                 <div class="col-lg-3 col-sm-2 col-xs-3">
-                    <h3> Contact </h3>
+                    <h3> Liên hệ </h3>
                     <ul>
                         <li><a id="email-footer" href="#">woftshoes@gmail.com</a></li>
                         <br/>
@@ -18,15 +18,13 @@
                         <li><a href="#" style="margin-top: 5em">THÔNG TIN VỀ CHÚNG TÔI</a></li>
                         <li><a href="#"> SERIES HIỆN TẠI </a></li>
                         <li><a href="#"> NGÔI NHÀ </a></li>
-                        <li><a href="#"> LOOKING BACK </a></li>
+                        <li><a href="#"> DEMO </a></li>
                     </ul>
                 </div>
 
-                <!--/.row-->
             </div>
-            <!--/.container-->
         </div>
-        <!--/.footer-->
+
 
 
 

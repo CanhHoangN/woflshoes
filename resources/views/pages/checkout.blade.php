@@ -1,37 +1,37 @@
 @extends('layouts.frontLayouts.master')
 @section('content')
-<div id="content"><!-- #content Begin -->
-       <div class="container"><!-- container Begin -->
-           <div class="col-md-12"><!-- col-md-12 Begin -->
+<div id="content">
+       <div class="container">
+           <div class="col-md-12">
                
-               <ul class="breadcrumb"><!-- breadcrumb Begin -->
+               <ul class="breadcrumb">
                    <li>
-                       <a href="{{route('home')}}">Home</a>
+                       <a href="{{route('index')}}">Home</a>
                    </li>
                    <li>
                        Checkout
                    </li>
-               </ul><!-- breadcrumb Finish -->
+               </ul>
                
-           </div><!-- col-md-12 Finish -->
+           </div>
            
-           <div class="col-md-3"><!-- col-md-3 Begin -->
+           <div class="col-md-3">
    
-    @include('layouts.frontLayouts.leftmenu');
+    @include('layouts.frontLayouts.leftmenu')
                
-           </div><!-- col-md-3 Finish -->
+           </div>
            
-           <div class="col-md-9"><!-- col-md-9 Begin -->
+           <div class="col-md-9">
                
-               <div class="box"><!-- box Begin -->
+               <div class="box">
                    
-                   <div class="box-header"><!-- box-header Begin -->
+                   <div class="box-header">
                        
-                       <center><!-- center Begin -->
+                       <center>
                            
                            <h2> Checkout </h2>
                            
-                       </center><!-- center Finish -->
+                       </center>
 
                        <form action="{!! url('checkout') !!}" method="post" enctype="multipart/form-data"><!-- form Begin -->
                        	<input type= "hidden" name= "_token" value= "{!! csrf_token() !!}" />
@@ -47,32 +47,32 @@
                            			{{Session::get('success')}}
                            		</div>
                            @endif
-                           <div class="form-group"><!-- form-group Begin -->
+                           <div class="form-group">
                                
                                <label>CustomerID</label>
                                
                                <input type="text" class="form-control" name="text" required>
                                
-                           </div><!-- form-group Finish -->
+                           </div>
                            
-                           <div class="form-group"><!-- form-group Begin -->
+                           <div class="form-group">
                                
                                <label>OrderID</label>
                                
                                <input type="text" class="form-control" name="text" required>
                                
-                           </div><!-- form-group Finish -->
+                           </div>
                            
-                           <div class="form-group"><!-- form-group Begin -->
+                           <div class="form-group">
                                
                                <label>ProductID</label>
                                
                                <input type="password" class="form-control" name="password" required>
                                
-                           </div><!-- form-group Finish -->
+                           </div>
 
                            
-                           <div class="text-center"><!-- text-center Begin -->
+                           <div class="text-center">
                                
                                <button type="submit" name="register" class="btn btn-primary">
                                
@@ -80,16 +80,16 @@
                                
                                </button>
                                
-                           </div><!-- text-center Finish -->
+                           </div>
                            
-                       </form><!-- form Finish -->
+                       </form>
                        
-                   </div><!-- box-header Finish -->
+                   </div>
                    
-               </div><!-- box Finish -->
+               </div>
                
-           </div><!-- col-md-9 Finish -->
+           </div>
            
-       </div><!-- container Finish -->
-   </div><!-- #content Finish -->
+       </div>
+   </div>
 @endsection()

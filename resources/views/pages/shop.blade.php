@@ -10,29 +10,29 @@ function limit_text($text, $limit) {
 ?>
 @extends('layouts.frontLayouts.master')
 @section('content')
-    <div id="content"><!-- #content Begin -->
-       <div class="container"><!-- container Begin -->
-           <div class="col-md-12"><!-- col-md-12 Begin -->
+    <div id="content">
+       <div class="container">
+           <div class="col-md-12">
                
-               <ul class="breadcrumb"><!-- breadcrumb Begin -->
+               <ul class="breadcrumb">
                    <li>
                        <a href="{{asset('/')}}">Home</a>
                    </li>
                    <li>
                        Shop
                    </li>
-               </ul><!-- breadcrumb Finish -->
+               </ul>
                
-           </div><!-- col-md-12 Finish -->
+           </div>
            
-           <div class="col-md-3"><!-- col-md-3 Begin -->
+           <div class="col-md-3">
             @include('layouts.frontLayouts.leftmenu')
-           </div><!-- col-md-3 Finish -->
+           </div>
            
-           <div class="col-md-9"><!-- col-md-9 Begin -->
+           <div class="col-md-9">
 
                
-               <div class="row"><!-- row Begin -->
+               <div class="row">
                @foreach($products as $p)
                        <div class="col-sm-4">
                            <div class="card">
@@ -47,7 +47,7 @@ function limit_text($text, $limit) {
                        </div>
 
                @endforeach
-               </div><!-- row Finish -->
+               </div>
                
                <center>
                   <div class="btn-group">
@@ -55,8 +55,8 @@ function limit_text($text, $limit) {
                   </div> 
                </center>
                 
-           </div><!-- col-md-9 Finish -->
+           </div>
            
-       </div><!-- container Finish -->
-   </div><!-- #content Finish -->
+       </div>
+   </div>
 @endsection()

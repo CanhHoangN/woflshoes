@@ -1,23 +1,23 @@
 @extends('layouts.frontLayouts.master')
 @section('content')
-<div id="content"><!-- #content Begin -->
-       <div class="container"><!-- container Begin -->
-           <div class="col-md-12"><!-- col-md-12 Begin -->
+<div id="content">
+       <div class="container">
+           <div class="col-md-12">
 
-               <ul class="breadcrumb"><!-- breadcrumb Begin -->
+               <ul class="breadcrumb">
                    <li>
                        <a href="{{asset('/')}}">Home</a>
                    </li>
                    <li>
                        Cart
                    </li>
-               </ul><!-- breadcrumb Finish -->
+               </ul>
 
-           </div><!-- col-md-12 Finish -->
+           </div>
 
-           <div id="cart" class="col-md-9"><!-- col-md-9 Begin -->
+           <div id="cart" class="col-md-9">
 
-               <div class="box"><!-- box Begin -->
+               <div class="box">
 
                    <form action="cart.php" method="post" enctype="multipart/form-data"><!-- form Begin -->
 
@@ -27,38 +27,38 @@
                        @else
                        <p class="text-muted">Bạn đang có 0 sản phẩm trong giỏ hàng.</p>
                        @endif
-                       <div class="table-responsive"><!-- table-responsive Begin -->
+                       <div class="table-responsive">
 
-                           <table class="table"><!-- table Begin -->
-                               <thead><!-- thead Begin -->
-                                   <tr><!-- tr Begin -->
+                           <table class="table">
+                               <thead>
+                                   <tr>
                                        <th>Sản phẩm</th>
                                        <th>Số lượng</th>
                                        <th>Giá hiện tại</th>
                                        <th>Miễn phí vận chuyển</th>
                                        <th>Tổng tiền</th>
-                                   </tr><!-- tr Finish -->
-                               </thead><!-- thead Finish -->
+                                   </tr>
+                               </thead>
 
-                               <tbody><!-- tbody Begin -->
+                               <tbody>
                                 @if(Session::has('Cart'))
                                 @foreach($product_cart as $prd)
-                                   <tr><!-- tr Begin -->
+                                   <tr>
                                        <td><img class="img-responsive" src="images/frontend_image/products/{{$prd['item']['productImg1']}}" alt="Product 3a"></td>
                                        <!-- <td><a href="{{route('detail',$prd['item']['productCode'])}}"></a></td> -->
                                        <td>{{$prd['quantity']}}</td>
                                        <td>{{$prd['item']['productPrice']}}</td>
                                        <td><i class="glyphicon glyphicon-thumbs-up"></i></td>
                                        <td>{{$prd['quantity']}} * {{$prd['item']['productPrice']}}</td>
-                                   </tr><!-- tr Finish -->
+                                   </tr>
                                 @endforeach
 
 
-                               </tbody><!-- tbody Finish -->
+                               </tbody>
 
-                               <tfoot><!-- tfoot Begin -->
+                               <tfoot>
 
-                                   <tr><!-- tr Begin -->
+                                   <tr>
 
                                        <th>Tổng</th>
                                        <th></th>
@@ -66,98 +66,98 @@
                                        <th></th>
                                        <th class="totalPrice" colspan="5">{{number_format(Session('Cart')->totalPrice)}}</th>
 
-                                   </tr><!-- tr Finish -->
+                                   </tr>
 
-                               </tfoot><!-- tfoot Finish -->
+                               </tfoot>
 
 
-                           </table><!-- table Finish -->
+                           </table>
 
-                       </div><!-- table-responsive Finish -->
+                       </div>
 
-                       <div class="box-footer"><!-- box-footer Begin -->
+                       <div class="box-footer">
 
-                           <div class="pull-left"><!-- pull-left Begin -->
+                           <div class="pull-left">
 
-                               <a href="{{asset('/')}}" class="btn btn-default"><!-- btn btn-default Begin -->
+                               <a href="{{asset('/')}}" class="btn btn-default">
 
                                    <i class="fa fa-chevron-left"></i> Tiếp tục mua sắm
 
-                               </a><!-- btn btn-default Finish -->
+                               </a>
 
-                           </div><!-- pull-left Finish -->
+                           </div>
 
-                           <div class="pull-right"><!-- pull-right Begin -->
+                           <div class="pull-right">
                                <a href="{{url('/checkout')}}" class="btn btn-primary">
 
                                    Hoàn thành đặt hàng. <i class="fa fa-chevron-right"></i>
                                </a>
 
-                           </div><!-- pull-right Finish -->
+                           </div>
 
-                       </div><!-- box-footer Finish -->
+                       </div>
 
-                   </form><!-- form Finish -->
+                   </form>
 
-               </div><!-- box Finish -->
+               </div>
 
 
-           </div><!-- col-md-9 Finish -->
+           </div>
 
-           <div class="col-md-3"><!-- col-md-3 Begin -->
+           <div class="col-md-3">
 
-               <div id="order-summary" class="box"><!-- box Begin -->
+               <div id="order-summary" class="box">
 
-                   <div class="box-header"><!-- box-header Begin -->
+                   <div class="box-header">
 
                        <h3>Order Summary</h3>
 
-                   </div><!-- box-header Finish -->
+                   </div>
 
-                   <p class="text-muted"><!-- text-muted Begin -->
+                   <p class="text-muted">
 
                        Vận chuyển và chi phí bổ sung được tính dựa trên giá trị bạn đã nhập
 
-                   </p><!-- text-muted Finish -->
+                   </p>
 
-                   <div class="table-responsive"><!-- table-responsive Begin -->
+                   <div class="table-responsive">
 
-                       <table class="table"><!-- table Begin -->
+                       <table class="table">
 
-                           <tbody><!-- tbody Begin -->
+                           <tbody>
 
-                               <tr><!-- tr Begin -->
+                               <tr>
 
                                    <td>Số lượng</td>
                                    <th> {{Session('Cart')->totalQuantity}} </th>
 
-                               </tr><!-- tr Finish -->
+                               </tr>
 
-                               <tr><!-- tr Begin -->
+                               <tr>
 
                                    <td> Thuế </td>
                                    <th> $0 </th>
 
-                               </tr><!-- tr Finish -->
+                               </tr>
 
-                               <tr class="total"><!-- tr Begin -->
+                               <tr class="total">
 
                                    <td> Tổng tiền </td>
                                    <th class="totalPrice"> {{number_format(Session('Cart')->totalPrice)}} </th>
 
-                               </tr><!-- tr Finish -->
+                               </tr>
 
-                           </tbody><!-- tbody Finish -->
+                           </tbody>
                            @endif
 
-                       </table><!-- table Finish -->
+                       </table>
 
-                   </div><!-- table-responsive Finish -->
+                   </div>
 
-               </div><!-- box Finish -->
+               </div>
 
-           </div><!-- col-md-3 Finish -->
+           </div>
 
-       </div><!-- container Finish -->
-   </div><!-- #content Finish -->
+       </div>
+   </div>
 @endsection()

@@ -1,24 +1,24 @@
 @extends('layouts.frontLayouts.master')
 @section('content')
-<div id="content"><!-- #content Begin -->
-       <div class="container"><!-- container Begin -->
-           <div class="col-md-12"><!-- col-md-12 Begin -->
+<div id="content">
+       <div class="container">
+           <div class="col-md-12">
                
-               <ul class="breadcrumb"><!-- breadcrumb Begin -->
+               <ul class="breadcrumb">
                    <li>
                        <a href="{{url('/')}}">Home</a>
                    </li>
                    <li>
                        Register
                    </li>
-               </ul><!-- breadcrumb Finish -->
+               </ul>
                
-           </div><!-- col-md-12 Finish -->
-           <div class="col-md-3"><!-- col-md-3 Begin -->
+           </div>
+           <div class="col-md-3">
 
     @include('layouts.frontLayouts.leftmenu')
                
-        </div><!-- col-md-3 Finish -->
+        </div>
 
            <div class="col-md-9">
                <div class="row register">
@@ -27,14 +27,14 @@
                        <form action="{!! url('register') !!}" method="post" enctype="multipart/form-data">
                            @csrf
                            @if(count($errors)>0)
-                               <div class='alert-danger'>
+                               <div class='login-failed alert-danger'>
                                    @foreach($errors->all() as $err)
                                        {{$err}}<br>
                                    @endforeach
                                </div>
                            @endif
                            @if(Session::has('success'))
-                               <div class='alert-success'>
+                               <div class='login-failed alert-success'>
                                    {{Session::get('success')}}
                                </div>
                            @endif
@@ -63,9 +63,9 @@
                </div>
 
                
-           </div><!-- col-md-8 Finish -->
+           </div>
            <div class="col-md-2"> </div>
            
-       </div><!-- container Finish -->
-   </div><!-- #content Finish -->
+       </div>
+   </div>
 @endsection()

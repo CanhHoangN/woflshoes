@@ -10,28 +10,28 @@ function limit_text($text, $limit) {
 ?>
 @extends('layouts.frontLayouts.master')
 @section('content')
-   <div id="content"><!-- #content Begin -->
-       <div class="container"><!-- container Begin -->
-           <div class="col-md-12"><!-- col-md-12 Begin -->
+   <div id="content">
+       <div class="container">
+           <div class="col-md-12">
                
-               <ul class="breadcrumb"><!-- breadcrumb Begin -->
+               <ul class="breadcrumb">
                    <li>
                        <a href={{route('index')}}>Home</a>
                    </li>
                    <li>
                        Result
                    </li>
-               </ul><!-- breadcrumb Finish -->
+               </ul>
                
-           </div><!-- col-md-12 Finish -->
+           </div>
            
          
            
-           <div class="col-md-12"><!-- col-md-9 Begin -->
+           <div class="col-md-12">
              
              
                
-               <div class="row"><!-- row Begin -->
+               <div class="row">
         
         		@if($count==0)
             
@@ -59,13 +59,13 @@ function limit_text($text, $limit) {
                 @endforeach
                 @endif
                
-               </div><!-- row Finish -->
+               </div>
                
              
               
                
-           </div><!-- col-md-9 Finish -->
+           </div>
            
-       </div><!-- container Finish -->
-   </div><!-- #content Finish -->
+       </div>
+   </div>
  @endsection()

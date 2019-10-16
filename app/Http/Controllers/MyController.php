@@ -161,24 +161,25 @@ class MyController extends Controller
     }
     public function checkout(Request $req)
     {
-        $cart = Session::get('Cart');
-        $order = new Orders();
-        if (Auth::check()) {
-            $order->customerID = Auth::user()->id;
-        } else {
-            return redirect('/login');
-        }
-        $order->orderDate = date('Y-m-d');
-        $order->save();
-        foreach ($cart->items as $key => $value) {
-            $orderdetail = new Orderdetails();
-            $orderdetail->orderID = $order->orderID;
-            $orderdetail->productID = $key;
-            $orderdetail->quantityOrderred = $value['quantity'];
-            $orderdetail->save();
-        }
+//        $cart = Session::get('Cart');
+//        $order = new Orders();
+//        if (Auth::check()) {
+//            $order->customerID = Auth::user()->id;
+//        } else {
+//            return redirect('/login');
+//        }
+//        $order->orderDate = date('Y-m-d');
+//        $order->save();
+//        foreach ($cart->items as $key => $value) {
+//            $orderdetail = new Orderdetails();
+//            $orderdetail->orderID = $order->orderID;
+//            $orderdetail->productID = $key;
+//            $orderdetail->quantityOrderred = $value['quantity'];
+//            $orderdetail->save();
+//        }
         Session::forget('Cart');
-        return redirect()->back();
+//        return redirect()->back();
+        return view('pages.checkout');
     }
     public function addCart2(Request $req, $id)
     {

@@ -12,17 +12,17 @@ function limit_text($text, $limit) {
 @section('content')
     @include('layouts.frontLayouts.sidebar')
 
-    <div id="advantages"><!-- #advantages Begin -->
+    <div id="advantages">
 
-        <div class="container"><!-- container Begin -->
+        <div class="container">
 
-            <div class="same-height-row"><!-- same-height-row Begin -->
+            <div class="same-height-row">
 
-                <div class="col-sm-4"><!-- col-sm-4 Begin -->
+                <div class="col-sm-4">
 
-                    <div class="box same-height"><!-- box same-height Begin -->
+                    <div class="box same-height">
 
-                        <div class="icon"><!-- icon Begin -->
+                        <div class="icon">
 
                             <i class="fa fa-heart"></i>
 
@@ -31,31 +31,31 @@ function limit_text($text, $limit) {
                         <h3><a href="{{url('detail/4')}}">Popular</a></h3>
                         <p>Sản phẩm phổ biến nhất</p>
 
-                    </div><!-- box same-height Finish -->
+                    </div>
 
-                </div><!-- col-sm-4 Finish -->
+                </div>
 
-                <div class="col-sm-4"><!-- col-sm-4 Begin -->
+                <div class="col-sm-4">
 
-                    <div class="box same-height"><!-- box same-height Begin -->
+                    <div class="box same-height">
 
-                        <div class="icon"><!-- icon Begin -->
+                        <div class="icon">
 
                             <i class="fa fa-tag"></i>
 
-                        </div><!-- icon Finish -->
+                        </div>
 
                         <h3><a href="{{url('detail/7')}}">Classic</a></h3>
 
                         <p>sản phẩm có phẩm chất cổ điển</p>
 
-                    </div><!-- box same-height Finish -->
+                    </div>
 
-                </div><!-- col-sm-4 Finish -->
+                </div>
 
-                <div class="col-sm-4"><!-- col-sm-4 Begin -->
+                <div class="col-sm-4">
 
-                    <div class="box same-height"><!-- box same-height Begin -->
+                    <div class="box same-height">
 
                         <div class="icon"><!-- icon Begin -->
 
@@ -67,37 +67,37 @@ function limit_text($text, $limit) {
 
                         <p>Sản phẩm độc đáo</p>
 
-                    </div><!-- box same-height Finish -->
+                    </div>
 
-                </div><!-- col-sm-4 Finish -->
+                </div>
 
-            </div><!-- same-height-row Finish -->
+            </div>
 
-        </div><!-- container Finish -->
+        </div>
 
-    </div><!-- #advantages Finish -->
+    </div>
 
-    <div id="hot"><!-- #hot Begin -->
+    <div id="hot">
 
-        <div class="box"><!-- box Begin -->
+        <div class="box">
 
-            <div class="container"><!-- container Begin -->
+            <div class="container">
 
-                <div class="col-md-12"><!-- col-md-12 Begin -->
+                <div class="col-md-12">
 
                     <h2>
                         Một số sản phẩm mới
                     </h2>
 
-                </div><!-- col-md-12 Finish -->
+                </div>
 
-            </div><!-- container Finish -->
+            </div>
 
-        </div><!-- box Finish -->
+        </div>
 
-    </div><!-- #hot Finish -->
+    </div>
 
-    <div id="content" class="container"><!-- container Begin -->
+    <div id="content" class="container">
         <div class="row"><!-- row Begin -->
             @foreach($product as $p)
                 <div class="col-sm-3">
@@ -119,7 +119,7 @@ function limit_text($text, $limit) {
                 </div>
             </center>
 
-        </div><!-- row Finish -->
+        </div>
 
-    </div><!-- container Finish -->
+    </div>
 @endsection()

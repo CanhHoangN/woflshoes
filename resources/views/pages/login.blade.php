@@ -19,7 +19,7 @@
 
     @include('layouts.frontLayouts.leftmenu')
                
-        </div><!-- col-md-3 Finish -->
+        </div>
            
            <div class="col-md-9 login"><!-- col-md-9 Begin -->
             <div class="row">
@@ -31,7 +31,7 @@
                         @csrf
                         <h2 id="signup">Đăng nhập</h2>
                         @if(Session::has('flag'))
-                            <div class="alert-{{Session::get('flag')}}">{{Session::get('message')}}</div>
+                            <div class="login-failed alert-{{Session::get('flag')}}">{{Session::get('message')}}</div>
                         @endif
                         <div class="email">
                             <label for="email"><i class="fa fa-envelope"></i></label>
