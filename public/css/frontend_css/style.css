@@ -1064,3 +1064,6 @@ button.btn-primary.add-detail {
     margin-left: 4px;
     margin-bottom: 10px;
 }
+a.btn.btn-success.btn-sm {
+    margin-right: 5px;
+}
